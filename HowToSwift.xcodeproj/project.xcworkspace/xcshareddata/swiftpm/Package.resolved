@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "SwiftyUserDefaults",
+        "repositoryURL": "https://github.com/sunshinejr/SwiftyUserDefaults",
+        "state": {
+          "branch": null,
+          "revision": "6c65d48296880db837afbaf28198392e416e58ef",
+          "version": "5.1.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

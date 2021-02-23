@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,7 @@
 		0442FC6B25E47B23000D7283 /* HowToSwift.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0442FC6925E47B23000D7283 /* HowToSwift.xcdatamodeld */; };
 		0442FC7625E47B23000D7283 /* HowToSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0442FC7525E47B23000D7283 /* HowToSwiftTests.swift */; };
 		0442FC8125E47B23000D7283 /* HowToSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0442FC8025E47B23000D7283 /* HowToSwiftUITests.swift */; };
+		0442FC9325E47C35000D7283 /* SwiftyUserDefaults in Frameworks */ = {isa = PBXBuildFile; productRef = 0442FC9225E47C35000D7283 /* SwiftyUserDefaults */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0442FC9325E47C35000D7283 /* SwiftyUserDefaults in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,6 +154,9 @@
 			dependencies = (
 			);
 			name = HowToSwift;
+			packageProductDependencies = (
+				0442FC9225E47C35000D7283 /* SwiftyUserDefaults */,
+			);
 			productName = HowToSwift;
 			productReference = 0442FC5B25E47B21000D7283 /* HowToSwift.app */;
 			productType = "com.apple.product-type.application";
@@ -223,6 +228,9 @@
 				Base,
 			);
 			mainGroup = 0442FC5225E47B21000D7283;
+			packageReferences = (
+				0442FC9125E47C35000D7283 /* XCRemoteSwiftPackageReference "SwiftyUserDefaults" */,
+			);
 			productRefGroup = 0442FC5C25E47B21000D7283 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -588,6 +596,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0442FC9125E47C35000D7283 /* XCRemoteSwiftPackageReference "SwiftyUserDefaults" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sunshinejr/SwiftyUserDefaults";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0442FC9225E47C35000D7283 /* SwiftyUserDefaults */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0442FC9125E47C35000D7283 /* XCRemoteSwiftPackageReference "SwiftyUserDefaults" */;
+			productName = SwiftyUserDefaults;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		0442FC6925E47B23000D7283 /* HowToSwift.xcdatamodeld */ = {
