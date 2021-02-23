@@ -16,6 +16,11 @@
 		0442FC7625E47B23000D7283 /* HowToSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0442FC7525E47B23000D7283 /* HowToSwiftTests.swift */; };
 		0442FC8125E47B23000D7283 /* HowToSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0442FC8025E47B23000D7283 /* HowToSwiftUITests.swift */; };
 		0442FC9325E47C35000D7283 /* SwiftyUserDefaults in Frameworks */ = {isa = PBXBuildFile; productRef = 0442FC9225E47C35000D7283 /* SwiftyUserDefaults */; };
+		0442FCA425E48EE5000D7283 /* SwiftUIComponents in Frameworks */ = {isa = PBXBuildFile; productRef = 0442FCA325E48EE5000D7283 /* SwiftUIComponents */; };
+		0442FCAF25E49149000D7283 /* HowTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0442FCAE25E49149000D7283 /* HowTo.swift */; };
+		0442FCBE25E4932A000D7283 /* UseSwiftyUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0442FCBD25E4932A000D7283 /* UseSwiftyUserDefaults.swift */; };
+		0442FCC325E49388000D7283 /* UseCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0442FCC225E49388000D7283 /* UseCoreData.swift */; };
+		0442FCC825E493DC000D7283 /* SandBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0442FCC725E493DC000D7283 /* SandBox.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +55,10 @@
 		0442FC7C25E47B23000D7283 /* HowToSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HowToSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0442FC8025E47B23000D7283 /* HowToSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToSwiftUITests.swift; sourceTree = "<group>"; };
 		0442FC8225E47B23000D7283 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0442FCAE25E49149000D7283 /* HowTo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HowTo.swift; sourceTree = "<group>"; };
+		0442FCBD25E4932A000D7283 /* UseSwiftyUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseSwiftyUserDefaults.swift; sourceTree = "<group>"; };
+		0442FCC225E49388000D7283 /* UseCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCoreData.swift; sourceTree = "<group>"; };
+		0442FCC725E493DC000D7283 /* SandBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SandBox.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0442FCA425E48EE5000D7283 /* SwiftUIComponents in Frameworks */,
 				0442FC9325E47C35000D7283 /* SwiftyUserDefaults in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -103,10 +113,13 @@
 			children = (
 				0442FC5E25E47B21000D7283 /* HowToSwiftApp.swift */,
 				0442FC6025E47B21000D7283 /* ContentView.swift */,
+				0442FCC725E493DC000D7283 /* SandBox.swift */,
 				0442FC6225E47B23000D7283 /* Assets.xcassets */,
 				0442FC6725E47B23000D7283 /* Persistence.swift */,
 				0442FC6C25E47B23000D7283 /* Info.plist */,
 				0442FC6925E47B23000D7283 /* HowToSwift.xcdatamodeld */,
+				0442FCAE25E49149000D7283 /* HowTo.swift */,
+				0442FCBC25E49314000D7283 /* How To's */,
 				0442FC6425E47B23000D7283 /* Preview Content */,
 			);
 			path = HowToSwift;
@@ -138,6 +151,15 @@
 			path = HowToSwiftUITests;
 			sourceTree = "<group>";
 		};
+		0442FCBC25E49314000D7283 /* How To's */ = {
+			isa = PBXGroup;
+			children = (
+				0442FCBD25E4932A000D7283 /* UseSwiftyUserDefaults.swift */,
+				0442FCC225E49388000D7283 /* UseCoreData.swift */,
+			);
+			path = "How To's";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -156,6 +178,7 @@
 			name = HowToSwift;
 			packageProductDependencies = (
 				0442FC9225E47C35000D7283 /* SwiftyUserDefaults */,
+				0442FCA325E48EE5000D7283 /* SwiftUIComponents */,
 			);
 			productName = HowToSwift;
 			productReference = 0442FC5B25E47B21000D7283 /* HowToSwift.app */;
@@ -230,6 +253,7 @@
 			mainGroup = 0442FC5225E47B21000D7283;
 			packageReferences = (
 				0442FC9125E47C35000D7283 /* XCRemoteSwiftPackageReference "SwiftyUserDefaults" */,
+				0442FCA225E48EE5000D7283 /* XCRemoteSwiftPackageReference "SwiftUIComponents" */,
 			);
 			productRefGroup = 0442FC5C25E47B21000D7283 /* Products */;
 			projectDirPath = "";
@@ -275,8 +299,12 @@
 			files = (
 				0442FC6825E47B23000D7283 /* Persistence.swift in Sources */,
 				0442FC6B25E47B23000D7283 /* HowToSwift.xcdatamodeld in Sources */,
+				0442FCBE25E4932A000D7283 /* UseSwiftyUserDefaults.swift in Sources */,
+				0442FCAF25E49149000D7283 /* HowTo.swift in Sources */,
 				0442FC6125E47B21000D7283 /* ContentView.swift in Sources */,
+				0442FCC325E49388000D7283 /* UseCoreData.swift in Sources */,
 				0442FC5F25E47B21000D7283 /* HowToSwiftApp.swift in Sources */,
+				0442FCC825E493DC000D7283 /* SandBox.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -606,6 +634,14 @@
 				minimumVersion = 5.1.0;
 			};
 		};
+		0442FCA225E48EE5000D7283 /* XCRemoteSwiftPackageReference "SwiftUIComponents" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/moyoteg/SwiftUIComponents";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -613,6 +649,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0442FC9125E47C35000D7283 /* XCRemoteSwiftPackageReference "SwiftyUserDefaults" */;
 			productName = SwiftyUserDefaults;
+		};
+		0442FCA325E48EE5000D7283 /* SwiftUIComponents */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0442FCA225E48EE5000D7283 /* XCRemoteSwiftPackageReference "SwiftUIComponents" */;
+			productName = SwiftUIComponents;
 		};
 /* End XCSwiftPackageProductDependency section */
 

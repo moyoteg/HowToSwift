@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "SwiftUIComponents",
+        "repositoryURL": "https://github.com/moyoteg/SwiftUIComponents",
+        "state": {
+          "branch": "main",
+          "revision": "8b2643b6b18e0e12a5e1cff663711155caf33e19",
+          "version": null
+        }
+      },
+      {
         "package": "SwiftyUserDefaults",
         "repositoryURL": "https://github.com/sunshinejr/SwiftyUserDefaults",
         "state": {
