@@ -88,11 +88,15 @@ struct ItemView: View {
 
     var body: some View {
         VStack {
-            Text("Item at \(item.timestamp!, formatter: ItemView.itemFormatter)")
-            Button("update timestamp") {
-                
-                item.timestamp = Date()
-                try? viewContext.save()
+            if item.timestamp != nil {
+                Text("Item at \(item.timestamp!, formatter: ItemView.itemFormatter)")
+                Button("update timestamp") {
+                    
+                    item.timestamp = Date()
+                    try? viewContext.save()
+                }
+            } else {
+                Text("no timestamp")
             }
         }
     }

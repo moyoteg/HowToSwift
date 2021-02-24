@@ -56,6 +56,7 @@
 		0442FCBD25E4932A000D7283 /* UseSwiftyUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseSwiftyUserDefaults.swift; sourceTree = "<group>"; };
 		0442FCC225E49388000D7283 /* UseCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCoreData.swift; sourceTree = "<group>"; };
 		0442FCC725E493DC000D7283 /* SandBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SandBox.swift; sourceTree = "<group>"; };
+		047F55DC25E6F1EA0051B567 /* HowToSwift.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HowToSwift.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +108,7 @@
 		0442FC5D25E47B21000D7283 /* HowToSwift */ = {
 			isa = PBXGroup;
 			children = (
+				047F55DC25E6F1EA0051B567 /* HowToSwift.entitlements */,
 				0442FC5E25E47B21000D7283 /* HowToSwiftApp.swift */,
 				0442FC6025E47B21000D7283 /* ContentView.swift */,
 				0442FCC725E493DC000D7283 /* SandBox.swift */,
@@ -142,17 +144,9 @@
 			isa = PBXGroup;
 			children = (
 				0442FCBD25E4932A000D7283 /* UseSwiftyUserDefaults.swift */,
-				049CD8E425E5EE1D00482E7F /* UseCoreData */,
-			);
-			path = "How To's";
-			sourceTree = "<group>";
-		};
-		049CD8E425E5EE1D00482E7F /* UseCoreData */ = {
-			isa = PBXGroup;
-			children = (
 				0442FCC225E49388000D7283 /* UseCoreData.swift */,
 			);
-			path = UseCoreData;
+			path = "How To's";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -455,6 +449,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HowToSwift/HowToSwift.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"HowToSwift/Preview Content\"";
 				DEVELOPMENT_TEAM = G7882XEDUN;
@@ -467,6 +462,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.pragcore.howtoswift.HowToSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -477,6 +473,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HowToSwift/HowToSwift.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"HowToSwift/Preview Content\"";
 				DEVELOPMENT_TEAM = G7882XEDUN;
@@ -489,6 +486,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.pragcore.howtoswift.HowToSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
