@@ -12,15 +12,67 @@ struct UseSwiftyUserDefaults: View {
     
     @State var parent: Parent?
     
+    @State private var queue = DispatchQueue(label: "my queue")
+    
     var body: some View {
         VStack {
             Toggle("use default value for reading Parent", isOn: Binding<Bool>(
                     get: { () -> Bool in
                         Defaults[\.useDefault]
-            }, set: { (value) in
-                Defaults[\.useDefault] = value
-            }))
+                    }, set: { (value) in
+                        Defaults[\.useDefault] = value
+                    }))
                 .padding()
+            
+            Divider()
+            
+            HStack {
+                
+                VStack {
+                    Button("create") {
+                        create()
+                    }
+                    .foregroundColor(Color.green)
+                    
+                    Divider()
+                    
+                    Button("clear") {
+                        clear()
+                    }
+                    .foregroundColor(Color.green)
+                }
+                .padding()
+                
+                Divider()
+                
+                VStack {
+                    
+                    Button("save") {
+                        save()
+                    }
+                    Divider()
+                    
+                    Button("update") {
+                        update()
+                    }
+                    Divider()
+                    
+                    Button("read") {
+                        read()
+                    }
+                }
+                .padding()
+                
+                Divider()
+                
+                Button("delete") {
+                    delete()
+                }
+                .foregroundColor(Color.red)
+                
+            }
+            .fixedSize(horizontal: false, vertical: true)
+            .padding()
             
             Divider()
             
@@ -42,65 +94,46 @@ struct UseSwiftyUserDefaults: View {
             }
         }
         .toolbar {
-            HStack {
-                Button("create") {
-                    create()
-                }
-                .foregroundColor(Color.green)
-                
-                Button("clear") {
-                    clear()
-                }
-                .foregroundColor(Color.green)
-                
-                Divider()
-
-                Button("save") {
-                    save()
-                }
-                
-                Button("update") {
-                    update()
-                }
-                
-                Button("read") {
-                    read()
-                }
-                
-                Divider()
-                
-                Button("delete") {
-                    delete()
-                }
-                .foregroundColor(Color.red)
-                
-            }
+            
         }
     }
     
     func create() {
-        parent = Parent(child: Child(child: ChildChild()))
+        queue.async {
+            parent = Parent(child: Child(child: ChildChild()))
+        }
     }
-
+    
     func clear() {
-        parent = nil
+        queue.async {
+            parent = nil
+            
+        }
     }
     
     func save() {
-        Defaults[\.parent] = parent
+        queue.async {
+            Defaults[\.parent] = parent
+        }
     }
     
     func read() {
-        parent = Defaults[\.parent]
+        queue.async {
+            parent = Defaults[\.parent]
+        }
     }
     
     func update() {
-        parent = Parent(child: Child(child: ChildChild()))
+        queue.async {
+            parent = Parent(child: Child(child: ChildChild()))
+        }
     }
     
     func delete() {
-        parent = nil
-        Defaults[\.parent] = parent
+        queue.async {
+            parent = nil
+            Defaults[\.parent] = parent
+        }
     }
 }
 
@@ -134,7 +167,9 @@ class ChildChild: Codable, DefaultsSerializable {
 }
 
 extension DefaultsKeys {
+    
     var parent: DefaultsKey<Parent?> {
+        // TODO: fix: Thread 16: Simultaneous accesses to 0x1089b99e0, but modification requires exclusive access
         if Defaults[\.useDefault] {
             return DefaultsKey<Parent?>.init("parent", defaultValue: `default`())
         } else {
@@ -143,9 +178,8 @@ extension DefaultsKeys {
     }
     
     var useDefault: DefaultsKey<Bool> { .init("useDefault", defaultValue: false) }
-
+    
 }
-
 
 func `default`() -> Parent {
     Parent(child: Child(child: ChildChild()))

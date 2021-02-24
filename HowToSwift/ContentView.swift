@@ -11,7 +11,7 @@ import CoreData
 
 let howTos: [HowTo] = [
     HowTo(isResolved: true, " 🔬 👨‍💻 sandbox 👩‍💻 🧪", AnyView(SandBox())),
-    HowTo(isResolved: true, "use swifty user defaults", AnyView(UseSwiftyUserDefaults())),
+    HowTo(isResolved: false, "use swifty user defaults", AnyView(UseSwiftyUserDefaults())),
     HowTo(isResolved: true, "use core data", AnyView(UserCoreData())),
 
 ]
