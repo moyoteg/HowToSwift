@@ -13,7 +13,9 @@ let howTos: [HowTo] = [
     HowTo(isResolved: true, " 🔬 👨‍💻 sandbox 👩‍💻 🧪", AnyView(SandBox())),
     HowTo(isResolved: false, "use swifty user defaults", AnyView(UseSwiftyUserDefaults())),
     HowTo(isResolved: true, "use core data", AnyView(UserCoreData())),
-
+    HowTo(isResolved: true, "use cloudy logs", AnyView(UseCloudyLogs())),
+    HowTo(isResolved: true, "merge dictionary", AnyView(MergeDictionary())),
+    
 ]
 
 struct ContentView: View {

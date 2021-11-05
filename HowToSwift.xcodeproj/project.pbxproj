@@ -20,6 +20,10 @@
 		0442FCBE25E4932A000D7283 /* UseSwiftyUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0442FCBD25E4932A000D7283 /* UseSwiftyUserDefaults.swift */; };
 		0442FCC325E49388000D7283 /* UseCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0442FCC225E49388000D7283 /* UseCoreData.swift */; };
 		0442FCC825E493DC000D7283 /* SandBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0442FCC725E493DC000D7283 /* SandBox.swift */; };
+		04B7067726FD9C0E00FFAD1F /* MergeDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B7067626FD9C0E00FFAD1F /* MergeDictionary.swift */; };
+		04DCAC2E26E15A2B00931C5B /* UseCloudyLogs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DCAC2D26E15A2B00931C5B /* UseCloudyLogs.swift */; };
+		04DCAC3126E15C4800931C5B /* SwiftUtilities in Frameworks */ = {isa = PBXBuildFile; productRef = 04DCAC3026E15C4800931C5B /* SwiftUtilities */; };
+		04DCAC3426E15C5E00931C5B /* CloudyLogs in Frameworks */ = {isa = PBXBuildFile; productRef = 04DCAC3326E15C5E00931C5B /* CloudyLogs */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +61,8 @@
 		0442FCC225E49388000D7283 /* UseCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCoreData.swift; sourceTree = "<group>"; };
 		0442FCC725E493DC000D7283 /* SandBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SandBox.swift; sourceTree = "<group>"; };
 		047F55DC25E6F1EA0051B567 /* HowToSwift.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HowToSwift.entitlements; sourceTree = "<group>"; };
+		04B7067626FD9C0E00FFAD1F /* MergeDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergeDictionary.swift; sourceTree = "<group>"; };
+		04DCAC2D26E15A2B00931C5B /* UseCloudyLogs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCloudyLogs.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +72,8 @@
 			files = (
 				0442FCA425E48EE5000D7283 /* SwiftUIComponents in Frameworks */,
 				0442FC9325E47C35000D7283 /* SwiftyUserDefaults in Frameworks */,
+				04DCAC3126E15C4800931C5B /* SwiftUtilities in Frameworks */,
+				04DCAC3426E15C5E00931C5B /* CloudyLogs in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,9 +121,7 @@
 				0442FC6025E47B21000D7283 /* ContentView.swift */,
 				0442FCC725E493DC000D7283 /* SandBox.swift */,
 				0442FC6225E47B23000D7283 /* Assets.xcassets */,
-				0442FC6725E47B23000D7283 /* Persistence.swift */,
 				0442FC6C25E47B23000D7283 /* Info.plist */,
-				0442FC6925E47B23000D7283 /* HowToSwift.xcdatamodeld */,
 				0442FCAE25E49149000D7283 /* HowTo.swift */,
 				0442FCBC25E49314000D7283 /* How To's */,
 				0442FC6425E47B23000D7283 /* Preview Content */,
@@ -144,9 +150,21 @@
 			isa = PBXGroup;
 			children = (
 				0442FCBD25E4932A000D7283 /* UseSwiftyUserDefaults.swift */,
-				0442FCC225E49388000D7283 /* UseCoreData.swift */,
+				04DCAC2D26E15A2B00931C5B /* UseCloudyLogs.swift */,
+				04B7067626FD9C0E00FFAD1F /* MergeDictionary.swift */,
+				046A0E2325E82ACE000088FA /* Use Core Data */,
 			);
 			path = "How To's";
+			sourceTree = "<group>";
+		};
+		046A0E2325E82ACE000088FA /* Use Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				0442FC6725E47B23000D7283 /* Persistence.swift */,
+				0442FC6925E47B23000D7283 /* HowToSwift.xcdatamodeld */,
+				0442FCC225E49388000D7283 /* UseCoreData.swift */,
+			);
+			path = "Use Core Data";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +186,8 @@
 			packageProductDependencies = (
 				0442FC9225E47C35000D7283 /* SwiftyUserDefaults */,
 				0442FCA325E48EE5000D7283 /* SwiftUIComponents */,
+				04DCAC3026E15C4800931C5B /* SwiftUtilities */,
+				04DCAC3326E15C5E00931C5B /* CloudyLogs */,
 			);
 			productName = HowToSwift;
 			productReference = 0442FC5B25E47B21000D7283 /* HowToSwift.app */;
@@ -243,6 +263,8 @@
 			packageReferences = (
 				0442FC9125E47C35000D7283 /* XCRemoteSwiftPackageReference "SwiftyUserDefaults" */,
 				0442FCA225E48EE5000D7283 /* XCRemoteSwiftPackageReference "SwiftUIComponents" */,
+				04DCAC2F26E15C4800931C5B /* XCRemoteSwiftPackageReference "SwiftUtilities" */,
+				04DCAC3226E15C5E00931C5B /* XCRemoteSwiftPackageReference "CloudyLogs" */,
 			);
 			productRefGroup = 0442FC5C25E47B21000D7283 /* Products */;
 			projectDirPath = "";
@@ -286,7 +308,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04B7067726FD9C0E00FFAD1F /* MergeDictionary.swift in Sources */,
 				0442FC6825E47B23000D7283 /* Persistence.swift in Sources */,
+				04DCAC2E26E15A2B00931C5B /* UseCloudyLogs.swift in Sources */,
 				0442FC6B25E47B23000D7283 /* HowToSwift.xcdatamodeld in Sources */,
 				0442FCBE25E4932A000D7283 /* UseSwiftyUserDefaults.swift in Sources */,
 				0442FCAF25E49149000D7283 /* HowTo.swift in Sources */,
@@ -634,6 +658,22 @@
 				kind = branch;
 			};
 		};
+		04DCAC2F26E15C4800931C5B /* XCRemoteSwiftPackageReference "SwiftUtilities" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/moyoteg/SwiftUtilities";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		04DCAC3226E15C5E00931C5B /* XCRemoteSwiftPackageReference "CloudyLogs" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/moyoteg/CloudyLogs";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -646,6 +686,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0442FCA225E48EE5000D7283 /* XCRemoteSwiftPackageReference "SwiftUIComponents" */;
 			productName = SwiftUIComponents;
+		};
+		04DCAC3026E15C4800931C5B /* SwiftUtilities */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 04DCAC2F26E15C4800931C5B /* XCRemoteSwiftPackageReference "SwiftUtilities" */;
+			productName = SwiftUtilities;
+		};
+		04DCAC3326E15C5E00931C5B /* CloudyLogs */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 04DCAC3226E15C5E00931C5B /* XCRemoteSwiftPackageReference "CloudyLogs" */;
+			productName = CloudyLogs;
 		};
 /* End XCSwiftPackageProductDependency section */
 

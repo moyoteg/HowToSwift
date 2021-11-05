@@ -2,11 +2,56 @@
   "object": {
     "pins": [
       {
+        "package": "Alamofire",
+        "repositoryURL": "https://github.com/Alamofire/Alamofire.git",
+        "state": {
+          "branch": null,
+          "revision": "f96b619bcb2383b43d898402283924b80e2c4bae",
+          "version": "5.4.3"
+        }
+      },
+      {
+        "package": "CloudyLogs",
+        "repositoryURL": "https://github.com/moyoteg/CloudyLogs",
+        "state": {
+          "branch": "master",
+          "revision": "b6d3b2b3f33f06b59b56507076702cd94c80ca94",
+          "version": null
+        }
+      },
+      {
+        "package": "DeviceKit",
+        "repositoryURL": "https://github.com/devicekit/DeviceKit.git",
+        "state": {
+          "branch": null,
+          "revision": "70f1564e4218f0b68b73a4a795cb31aee5696f08",
+          "version": "4.4.0"
+        }
+      },
+      {
+        "package": "LocalConsole",
+        "repositoryURL": "https://github.com/duraidabdul/LocalConsole",
+        "state": {
+          "branch": "main",
+          "revision": "3c2683c6bfcc93c25ab8308a3d95610f09ebe767",
+          "version": null
+        }
+      },
+      {
         "package": "SwiftUIComponents",
         "repositoryURL": "https://github.com/moyoteg/SwiftUIComponents",
         "state": {
           "branch": "main",
-          "revision": "8b2643b6b18e0e12a5e1cff663711155caf33e19",
+          "revision": "82a2da16699973f92a1a249418f63b5e11d454d4",
+          "version": null
+        }
+      },
+      {
+        "package": "SwiftUtilities",
+        "repositoryURL": "https://github.com/moyoteg/SwiftUtilities",
+        "state": {
+          "branch": "master",
+          "revision": "4d682709e0e7cc3e4224b9f3565341dc7c3c7a5f",
           "version": null
         }
       },
@@ -15,8 +60,8 @@
         "repositoryURL": "https://github.com/sunshinejr/SwiftyUserDefaults",
         "state": {
           "branch": null,
-          "revision": "6c65d48296880db837afbaf28198392e416e58ef",
-          "version": "5.1.0"
+          "revision": "f66bcd04088582c8fbb5cb8554d577e303bae396",
+          "version": "5.3.0"
         }
       }
     ]
